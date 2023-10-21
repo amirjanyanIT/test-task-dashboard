@@ -1,3 +1,5 @@
+import { Layout } from "./components";
+
 export const App = () => {
-  return <div>Hello World</div>
-}
+  return <Layout>Hello World</Layout>;
+};
