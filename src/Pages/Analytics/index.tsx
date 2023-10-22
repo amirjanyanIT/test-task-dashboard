@@ -1,4 +1,6 @@
+import { Layout } from "../../components"
+
 export const Analytics = () => {
 
-    return <div>Analytics Page</div>
+    return <Layout title="Analytics">Analytics</Layout>
 }

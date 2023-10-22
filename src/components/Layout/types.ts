@@ -1,9 +1,16 @@
 import { ReactPortal } from "react";
 
-interface PropsI {
-  children: JSX.Element | string;
+
+interface SideBarPropsI {
+  open: boolean;
+  requestToClose: () => void;
 }
 
-export type SideBarT = (props: { open: boolean, requestToClose: () => void }) => ReactPortal;
+export type SideBarT = (props: SideBarPropsI) => ReactPortal;
 
-export type ComponentT = (props: PropsI) => JSX.Element;
+interface LayoutPropsI {
+  children: JSX.Element | string;
+  title: string;
+}
+
+export type LayoutT = (props: LayoutPropsI) => JSX.Element;

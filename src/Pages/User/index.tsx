@@ -1,4 +1,6 @@
+import { Layout } from "../../components"
+
 export const User = () => {
 
-    return <div>User Page</div>
+    return <Layout title="Users">Users</Layout>
 }

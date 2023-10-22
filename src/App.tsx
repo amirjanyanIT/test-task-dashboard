@@ -1,5 +1,5 @@
 import { Layout } from "./components";
 
 export const App = () => {
-  return <Layout>Hello World</Layout>;
+  return <Layout title="Test Task App">...</Layout>;
 };
