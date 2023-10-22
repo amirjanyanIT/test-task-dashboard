@@ -1,6 +1,11 @@
-import { Layout } from "../../components"
-
+import { Layout } from "../../components";
+import { Helmet } from "react-helmet";
 export const Report = () => {
-
-    return <Layout title="Reports">Reports</Layout>
-}
+  return (
+    <Layout title="Reports">
+      <Helmet>
+        <title>Reports</title>
+      </Helmet>
+    </Layout>
+  );
+};
