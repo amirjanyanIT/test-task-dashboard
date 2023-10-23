@@ -18,6 +18,9 @@ export const App = () => {
       <Helmet>
         <title>Test Task App</title>
       </Helmet>
+      <div className="content">
+        THIS APPLICATION CREATED AS TEST TASK
+      </div>
     </Layout>
   );
 };
