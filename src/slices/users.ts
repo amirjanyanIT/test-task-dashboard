@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const analytics = createSlice({
+const analytics = createSlice({
   name: "Users",
   initialState: {
     data: [],
@@ -13,5 +13,6 @@ export const analytics = createSlice({
   },
 });
 
+export const { set: setAnalytics } = analytics.actions;
 
-export default analytics.reducer
+export const analyticsReducer = analytics.reducer;

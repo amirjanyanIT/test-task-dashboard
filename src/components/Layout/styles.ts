@@ -19,10 +19,17 @@ export const Container = styled.div<{ sideBarState: boolean }>`
       line-height: 2px;
     }
     .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
       margin-left: 5px;
+      margin-right: 5px;
       padding-left: ${({ sideBarState }) =>
         sideBarState ? sideSpace - 48 : 0}px;
       transition: 0.3s ease-in-out padding-left;
+      .logout {
+        cursor: pointer;
+      }
     }
   }
   .main {

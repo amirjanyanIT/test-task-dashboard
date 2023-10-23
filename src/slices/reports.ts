@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const reports = createSlice({
+const reports = createSlice({
   name: "Reports",
   initialState: {
     data: [],
@@ -13,6 +13,6 @@ export const reports = createSlice({
   },
 });
 
-export const { set } = reports.actions
+export const { set: setReports } = reports.actions;
 
-export default reports.reducer
+export const reportsReducer = reports.reducer;

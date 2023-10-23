@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Container, SideBarContainer } from "./styles";
 import { LayoutT, SideBarT } from "./types";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
-
+import { MdLogout  } from 'react-icons/md';
 export const SideBar: SideBarT = ({ open, requestToClose }) => {
   const navigate = useNavigate();
 
@@ -44,6 +44,13 @@ export const SideBar: SideBarT = ({ open, requestToClose }) => {
 
 export const Layout: LayoutT = ({ children, title }) => {
   const [sideBarState, setSideBarState] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  const handleLogout = useCallback(() => {
+    localStorage.removeItem('auth');
+    navigate('/login');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <Container sideBarState={sideBarState}>
@@ -53,6 +60,7 @@ export const Layout: LayoutT = ({ children, title }) => {
         </button>
         <div className="content">
           <div className="title">{title}</div>
+          <div className="logout" onClick={() => handleLogout()}><MdLogout /></div>
         </div>
       </div>
       <SideBar
