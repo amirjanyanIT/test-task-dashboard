@@ -1,17 +1,31 @@
 import React from "react";
-import { GlobalStyles } from "./GlobalStyles";
+import { NotFound } from "./Pages";
+interface PropsI {
+  children?: React.ReactElement | React.ReactElement[];
+}
+interface StateI {
+  hasError: boolean;
+}
 
-export class ErrorBoundary extends React.Component {
-  constructor(props: {}) {
+export class ErrorBoundary extends React.Component<PropsI, StateI> {
+  constructor(props: PropsI) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError() {}
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
 
-  componentDidCatch() {}
+  componentDidCatch() {
+    this.setState({ hasError: true })
+  }
 
   render() {
-    return <div className="error-404"><GlobalStyles />Page not found</div>;
+    if(this.state.hasError) {
+      return <NotFound />;
+    }
+
+    return this.props.children || [];
   }
 }

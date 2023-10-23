@@ -9,6 +9,10 @@ export const GlobalStyles = createGlobalStyle`
         --dark: #002884;
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         font-size: 12px;
         font-family: 'Sometype Mono', monospace;;
