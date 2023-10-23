@@ -3,16 +3,19 @@
         {
             "id": 1,
             "name": "John",
+            "image": "https://www.bl.uk/britishlibrary/~/media/bl/global/dl%2020th%20century/authors/osborne-people-page-gettyimages-514881492.jpg?crop=1&cropX=0&cropY=57&cropW=1706&cropH=957&cropcachekey=10571706957&w=608&h=342&dispW=608&dispH=342&hash=CC0B25C34C0BA90BCFB9DD3393374EDF",
             "email": "john@gmail.com"
         },
         {
             "id": 2,
             "name": "Kane",
+            "image": "https://static.wikia.nocookie.net/pediaofinterest/images/8/87/ReeseS4.jpg/revision/latest?cb=20140913133634",
             "email": "kane@gmail.com"
         },
         {
             "id": 3,
             "name": "Lilit",
+            "image": "https://variety.com/wp-content/uploads/2021/06/Debbie-Morgan-Our-Kind-of-People-Fox.jpg",
             "email": "lilit@gmail.com"
         }
     ],

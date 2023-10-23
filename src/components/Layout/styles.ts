@@ -28,6 +28,7 @@ export const Container = styled.div<{ sideBarState: boolean }>`
   .main {
     padding-left: ${({ sideBarState }) => (sideBarState ? sideSpace : 0)}px;
     margin-left: ${({ sideBarState }) => (sideBarState ? 2 : 10)}px;
+    margin-right: ${({ sideBarState }) => (sideBarState ? 2 : 10)}px;
     margin-top: 10px;
     transition: 0.3s ease-in-out padding-left;
   }

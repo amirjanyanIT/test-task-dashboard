@@ -9,7 +9,7 @@ interface SideBarPropsI {
 export type SideBarT = (props: SideBarPropsI) => ReactPortal;
 
 interface LayoutPropsI {
-  children: JSX.Element | string;
+  children: JSX.Element | JSX.Element[] | string;
   title: string;
 }
 
