@@ -30,20 +30,31 @@ export const Login = () => {
         <title>Login</title>
       </Helmet>
       <Container>
-        <form onSubmit={(e) => {
-          e.preventDefault();
-          handleLogin(); 
-        }}>
-          <input
-            type=""
-            value={form.login}
-            onChange={(e) => setForm({ ...form, login: e.target.value })}
-          />
-          <input
-            type="password"
-            value={form.password}
-            onChange={(e) => setForm({ ...form, password: e.target.value })}
-          />
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleLogin();
+            handleLogin();
+          }}
+        >
+          admin/admin
+          <div>
+            <label>Login</label>
+            <input
+              type=""
+              value={form.login}
+              onChange={(e) => setForm({ ...form, login: e.target.value })}
+            />
+          </div>
+          <div>
+            <label>Password</label>
+            <input
+              type="password"
+              value={form.password}
+              onChange={(e) => setForm({ ...form, password: e.target.value })}
+            />
+          </div>
+
           <button type="submit">Login</button>
         </form>
       </Container>

@@ -5,7 +5,9 @@ import { LayoutT, SideBarT } from "./types";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
 import { MdLogout  } from 'react-icons/md';
+
 export const SideBar: SideBarT = ({ open, requestToClose }) => {
+
   const navigate = useNavigate();
 
   const sideRoutes = [

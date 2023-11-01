@@ -11,11 +11,12 @@ import {
   fetchUsers,
 } from "../../slices";
 import { RootState } from "../../store";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const Report = () => {
   const { id } = useParams();
   const dispatch = useDispatch<any>();
+  const navigate = useNavigate();
   const reports = useSelector<RootState, ReportsStateI>(
     (state) => state.reports
   );
@@ -27,11 +28,15 @@ export const Report = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
   const renderReports = () => {
-    const cReports = id ? reports.data.filter(r => r.userId === Number(id)) : reports.data; 
-    
+    const cReports = id
+      ? reports.data.filter((r) => r.userId === Number(id))
+      : reports.data;
+
     return cReports.map((report, index) => {
+      
+      const user = users.data.find((u) => u.id === report.userId);
+
       return (
         <div className="item" key={index}>
           <div className="title">{report.title}</div>
@@ -39,20 +44,16 @@ export const Report = () => {
             <div
               className="avatar"
               style={{
-                backgroundImage: `url(${
-                  users.data.find((u) => u.id === report.userId)?.image
-                })`,
+                backgroundImage: `url(${user?.image})`,
               }}
             ></div>
-            <div className="email">
-              {users.data.find((u) => u.id === report.userId)?.email}
-            </div>
+            <div className="email">{user?.name} {user?.email}</div>
           </div>
           <div className="content">{report.content}</div>
         </div>
       );
-    })
-  }
+    });
+  };
 
   return (
     <Layout title="Reports">
@@ -60,9 +61,8 @@ export const Report = () => {
         <title>Reports</title>
       </Helmet>
       <Container>
-        <div className="list">
-          {renderReports()}
-        </div>
+        <div className="header"><button onClick={() => navigate(-1)}>Go Back</button></div>
+        <div className="list">{renderReports()}</div>
       </Container>
     </Layout>
   );

@@ -10,13 +10,20 @@ export const Container = styled.div`
     justify-content: center;
     width: 250px;
     height: 400px;
-    input {
-      height: 25px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
       width: 100%;
-      padding: 0 10px;
-      border: 1px solid var(--dark);
-      border-radius: 20px;
+      input {
+        height: 25px;
+        width: 100%;
+        padding: 0 10px;
+        border: 1px solid var(--dark);
+        border-radius: 20px;
+      }
     }
+
     button {
       cursor: pointer;
       background-color: var(--dark);

@@ -6,14 +6,24 @@ export const Container = styled.div`
         display: grid;
         max-width: 800px;
         gap: 10px;
+        justify-content: center;
         grid-template-columns: auto auto auto;
+        
+        @media only screen and (max-width: 1024px) {
+            grid-template-columns: auto auto;
+        }
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: auto;
+        }
         .card {
+            display: flex;
+            cursor: pointer;
             background-color: var(--light);
             border-radius: 20px;
             padding: 20px 0;
-            display: flex;
             flex-direction: column;
             height: 250px;
+            min-width: 250px;
             justify-content: space-between;
             align-items: center;
             &--image {
@@ -32,7 +42,7 @@ export const Container = styled.div`
             &--actions {
                 cursor: pointer;
                 margin-top: 10px;
-                color: red;
+                color: #f4f4f4;
                 font-size: 20px;
                 font-weight: bold;
             }

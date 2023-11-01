@@ -27,8 +27,13 @@ export const Container = styled.div<{ sideBarState: boolean }>`
       padding-left: ${({ sideBarState }) =>
         sideBarState ? sideSpace - 48 : 0}px;
       transition: 0.3s ease-in-out padding-left;
+      background-color: transparent;
+      .title {
+        line-height: 22px;
+      }
       .logout {
         cursor: pointer;
+        font-size: 20px;
       }
     }
   }

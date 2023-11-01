@@ -3,13 +3,13 @@
         {
             "id": 1,
             "name": "John",
-            "image": "https://www.bl.uk/britishlibrary/~/media/bl/global/dl%2020th%20century/authors/osborne-people-page-gettyimages-514881492.jpg?crop=1&cropX=0&cropY=57&cropW=1706&cropH=957&cropcachekey=10571706957&w=608&h=342&dispW=608&dispH=342&hash=CC0B25C34C0BA90BCFB9DD3393374EDF",
+            "image": "https://cdn.britannica.com/41/218341-050-51D8903F/American-actor-John-Krasinski-2020.jpg",
             "email": "john@gmail.com"
         },
         {
             "id": 2,
             "name": "Kane",
-            "image": "https://static.wikia.nocookie.net/pediaofinterest/images/8/87/ReeseS4.jpg/revision/latest?cb=20140913133634",
+            "image": "https://media.newyorker.com/photos/631122e0f97ed9b6bfd2d90f/1:1/w_2614,h_2615,c_limit/Schulman_TNYInterview_JohnLegend_Final.jpg",
             "email": "kane@gmail.com"
         },
         {
